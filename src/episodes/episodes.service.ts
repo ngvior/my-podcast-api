@@ -27,7 +27,7 @@ export class EpisodesService {
     return episode;
   }
 
-  async create(createEpisodeDto: CreateEpisodeDto) { 
+  async create(createEpisodeDto: CreateEpisodeDto) {
     const newEpisode = { ...createEpisodeDto, id: randomUUID() };
     this.episodes.push(newEpisode);
     return newEpisode;
@@ -35,6 +35,6 @@ export class EpisodesService {
 }
 
 function randomUUID() {
-//   throw new Error('Function not implemented.');
-  return '1';
+  //   throw new Error('Function not implemented.');
+  return crypto.randomUUID();
 }
